@@ -1,0 +1,43 @@
+#confirm_sent_popup .modal-content, #error_popup .modal-content {
+  background: url(../../images/eyecatcher_welzijn.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  background-image: #000;
+}
+
+.modal-body {
+  background-color: #fff;
+}
+
+#error_popup .modal-body {
+  background-color: #fa8;
+}
+
+.modal-content h5 {
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+
+#yoga_popupLabel, #meditatie_popupLabel {
+  color: #525150;
+}
+
+#footer {
+  text-align: center;
+}
+
+#privacy_statement {
+  font-size: 70%;
+}
+#splash_text p {
+  font-family: "Trebuchet MS",Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 264%;
+  color: #F3F5ED;
+}
+
+.scroll_anchor {
+  margin-bottom: 55px; 
+}

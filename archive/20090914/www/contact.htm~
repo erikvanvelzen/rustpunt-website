@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+<head>
+ <title>Contact</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <link href="styles/info_pane.css" rel="stylesheet" type="text/css" media="screen" />
+ <script type="text/javascript">
+ //<![CDATA[
+	function setSelected(idSuffix) {
+		linksCol = document.getElementById( 'buttons' );
+		var links = window.parent.collectionToArray( linksCol.getElementsByTagName( 'a' ) );
+		setLinkSelected = function( obj, index ) {
+			if (obj.id.match( idSuffix )) {
+				obj.className = 'selected'
+			} else {
+				obj.className = '';
+			}
+		};
+		links.each( setLinkSelected );
+	}
+ //]]>
+ </script>
+</head>
+<body>
+ <div class="menu_contact">
+  <div class="menu_text">
+   <h2>ERIK VAN VELZEN</h2>
+   <br/>
+   E-mail erik@rust-punt.com<br/>
+   <br/>
+   Telefoon 06 4297 05 75<br/>
+   <br/>test
+   Fax 084 746 41 84<br/>
+   <br/>
+   Bank 52.72.85.951<br/>
+   (E. van Velzen, Utrecht)<br/>
+   <br/>
+   <div class="privacy_statement">
+    privacy<br/>
+    Informatie wordt alleen op eigen verzoek verstuurd. Persoons-  en adresgegevens die via de website worden ontvangen worden nooit gebruikt in externe communicatie, tenzij daar expliciet toestemming voor is gegeven. Gegevens worden vertrouwelijk behandeld en niet voor andere doeleinden gebruikt of aan derden verstrekt.
+   </div>
+  </div>
+ 	<!--ul id="buttons">
+ 		<li id="button_lessen_utrecht"><a id="link_dru_yoga_utrecht" onclick="setSelected('utrecht');" href="dru_yoga_utrecht.htm" target="info_main">Lessen in Utrecht</a></li>
+ 		<li id="button_lessen_amsterdam"><a id="link_dru_yoga_amsterdam" onclick="setSelected('amsterdam');" href="dru_yoga_amsterdam.htm" target="info_main">Lessen in Amsterdam</a></li>
+ 		<li id="button_meer_dru_yoga"><a id="link_dru_yoga_meer_info" onclick="setSelected('meer_info');" href="dru_yoga_meer_info.htm" target="info_main">Meer over Dru Yoga</a></li>
+ 	</ul-->
+ </div>
+ <div>
+ 	<iframe class="info_contact" name="info_main" src="contact_info_dru_yoga_utrecht.htm"></iframe>
+ </div>
+</body>
+</html>

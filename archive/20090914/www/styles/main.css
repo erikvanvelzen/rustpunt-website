@@ -1,0 +1,98 @@
+body {
+	margin: 0px;
+	background: #f1efee;
+}
+#header_image {
+	border: none;
+	}
+.main {
+	height: 1000px;
+	text-align: center;
+}
+#tabs_container {
+	background: #ffffff;;
+	width: 1200px;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+}
+#tabs {
+	background: #715f52;
+	width: 1200px;
+	height: 27px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#buttons {
+	margin: 0;
+	padding: 0;
+	height: 27px;
+	list-style: none;
+	display: inline;
+	overflow: hidden;
+	}
+#buttons li {
+	margin: 0; 
+	padding: 0;
+        list-style: none;
+	display: inline;
+	}
+#buttons a {
+	float: left;
+	padding: 27px 0px 0px 0px;
+	overflow: hidden;
+	height: 0px !important; 
+	height /**/:27px; /* for IE5/Win only */
+	}
+#buttons a:hover {
+	background-position: 0 -27px;
+	}
+#buttons a:active, #buttons a.selected { /* You'd use selected on an button that needs to be highlighted at all times. */
+	background-position: 0 -54px;
+	}
+#button_dru_yoga a  {
+	width: 115px;
+	background: #b9b0aa url('../images/buttons_dru_yoga.gif') top left no-repeat;
+	}
+#button_meditatie a  {
+	width: 108px;
+	background: #b9b0aa url('../images/buttons_meditatie.gif') top left no-repeat;
+	}
+#button_stressmanagement a  {
+	width: 204px;
+	background: #b9b0aa url('../images/buttons_stressmanagement.gif') top left no-repeat;
+	}
+#button_welzijn a  {
+	width: 92px;
+	background: #b9b0aa url('../images/buttons_welzijn.gif') top left no-repeat;
+	}
+#button_contact a  {
+	width: 104px;
+	background: url('../images/buttons_contact.gif') top left no-repeat;
+	}
+#button_agenda a  {
+	width: 81px;
+	background: url('../images/buttons_agenda.gif') top left no-repeat;
+	}
+#button_docent a  {
+	width: 77px;
+	background: url('../images/buttons_docent.gif') top left no-repeat;
+	}
+#button_links a  {
+	width: 80px;
+	background: url('../images/buttons_links.gif') top left no-repeat;
+	}
+.hidden_eyecatcher {
+	display: none;
+}
+.visible_eyecatcher {
+	left: 10px;
+	top: 148px;
+}
+iframe {
+	border: none;
+}
+.info_panel {
+ 	width: 1200px;
+ 	height: 400px;
+}

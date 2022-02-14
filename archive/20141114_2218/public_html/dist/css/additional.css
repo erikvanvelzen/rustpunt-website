@@ -1,0 +1,53 @@
+#yoga_lessen_popup .modal-content, #yoga_popup .modal-content {
+  background: url(../../images/eyecatcher_dru_yoga.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  background-image: #000;
+}
+
+#meditatie_lessen_popup .modal-content, #meditatie_popup .modal-content {
+  background: url(../../images/eyecatcher_meditatie.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  background-image: #000;
+}
+
+
+#stressmanagement_lessen_popup .modal-content, #stressmanagement_popup .modal-content, #confirm_sent_popup .modal-content, #error_popup .modal-contect {
+  background: url(../../images/eyecatcher_stressmanagement.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  background-image: #000;
+}
+
+#confirm_sent_popup .modal-content, #error_popup .modal-content {
+  background: url(../../images/eyecatcher_welzijn.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  background-image: #000;
+}
+
+.modal-body {
+  background-color: #fff;
+}
+
+#error_popup .modal-body {
+  background-color: #fa8;
+}
+
+.modal-content h5 {
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+
+#yoga_popupLabel, #meditatie_popupLabel {
+  color: #525150;
+}

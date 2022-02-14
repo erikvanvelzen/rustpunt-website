@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+<head>
+ <title>Stressmanagement</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <link href="styles/info_pane.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+
+ <div class="info_main_contact">
+ <h2 class="downtoned">IK WIL ME GRAAG OPGEVEN VOOR</h2>
+ <a href="contact_info_dru_yoga_amsterdam.htm"><div class="info_main_contact_inactive" onmouseover="this.className='info_main_contact_active';" onmouseout="this.className='info_main_contact_inactive';">PROEFLES DRU YOGA IN AMSTERDAM</div></a>
+ <br/><br/>
+ <h2 class="downtoned">IK WIL GRAAG OP DE HOOGTE GEHOUDEN WORDEN OVER</h2>
+ <div class="info_main_contact_active">MEDITATIELES</div>
+ <br/><br/>
+ <h2 class="downtoned">IK HEB EEN ANDERE VRAAG</h2>
+ <a href="mailto:erik@rust-punt.com"><div class="info_main_contact_inactive" onmouseover="this.className='info_main_contact_active';" onmouseout="this.className='info_main_contact_inactive';">E-MAIL</div></a>
+ </div>
+
+ <div class="info_extra">
+  <h2>AANMELDEN</h2>
+  <p>Ik ben ge&iuml;nteresseerd om &eacute;&eacute;n keer in de week een meditatieles bij te wonen in Amsterdam. Laat me weten wanneer de volgende cursus begint.</p>
+  <form name="meditatie_aanvraag" id="meditatie_aanvraag" action="process_meditatie_aanvraag_contact.php" method="POST">
+    <div class="formfield_label_div">
+     <label for="meditatie_aanvraag_naam">Naam</label>
+    </div>
+    <div class="formfield_input_div">
+     <input type="text" name="meditatie_aanvraag_naam" id="meditatie_aanvraag_naam" />
+    </div>
+    <div class="formfield_label_div">
+     <label for="meditatie_aanvraag_telefoon">Telefoon</label>
+    </div>
+    <div class="formfield_input_div">
+     <input type="text" name="meditatie_aanvraag_telefoon" id="meditatie_aanvraag_telefoon" />
+    </div>
+    <div class="formfield_label_div">
+     <label for="meditatie_aanvraag_emailadres">eMailadres</label>
+    </div>
+    <div class="formfield_input_div">
+     <input type="text" name="meditatie_aanvraag_emailadres" id="meditatie_aanvraag_emailadres" />
+    </div>
+    <div id="submit_container">
+     <ul id="submit">
+      <li id="submit_button"><a id="link_submit_button" href="submit" onclick="document.getElementById( 'meditatie_aanvraag' ).submit();return false;">verzend</a></li>
+     </ul>
+    </div>
+  </form>
+ </div>
+
+</body>
+</html>

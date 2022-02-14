@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+<head>
+ <title>Agenda</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <link href="styles/info_pane.css" rel="stylesheet" type="text/css" media="screen" />
+ <script type="text/javascript">
+ //<![CDATA[
+	function setSelected(idSuffix) {
+		linksCol = document.getElementById( 'buttons' );
+		var links = window.parent.collectionToArray( linksCol.getElementsByTagName( 'a' ) );
+		setLinkSelected = function( obj, index ) {
+			if (obj.id.match( idSuffix )) {
+				obj.className = 'selected'
+			} else {
+				obj.className = '';
+			}
+		};
+		links.each( setLinkSelected );
+	}
+ //]]>
+ </script>
+</head>
+<body>
+ <div class="menu">
+ 	<!--ul id="buttons">
+ 		<li id="button_lessen_utrecht"><a id="link_dru_yoga_utrecht" onclick="setSelected('utrecht');" href="dru_yoga_utrecht.htm" target="info_main">Lessen in Utrecht</a></li>
+ 		<li id="button_lessen_amsterdam"><a id="link_dru_yoga_amsterdam" onclick="setSelected('amsterdam');" href="dru_yoga_amsterdam.htm" target="info_main">Lessen in Amsterdam</a></li>
+ 		<li id="button_meer_dru_yoga"><a id="link_dru_yoga_meer_info" onclick="setSelected('meer_info');" href="dru_yoga_meer_info.htm" target="info_main">Meer over Dru Yoga</a></li>
+ 	</ul-->
+ </div>
+ <div>
+ 	<iframe class="info" name="info_main" src="agenda_info.htm"></iframe>
+ </div>
+</body>
+</html>

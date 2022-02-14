@@ -1,0 +1,82 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.navbar {
+  background-color: #715f52;
+}
+.navbar-brand {
+  margin-right: 60px;
+  height: 55px;
+  font-size: 200%;
+  font-family: 'Noto Sans', sans-serif;
+  font-variant: small-caps;
+}
+.navbar-brand .left {
+  color: #fff;
+}
+.navbar-brand .right {
+  color: #97908d;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #97908d;
+}
+.splash_sizer {
+  height: 18em;
+}
+.jumbotron_sizer {
+  height: 6em;
+}
+.jumbotron_sizer_xs {
+  height: 4em;
+}
+.jumbotron {
+  background-color: #777;
+}
+.jumbotron h1 {
+  color: #e6e3db;
+}
+/* jumbotron_home is obsolete? */
+#jumbotron_home {
+  background: url(../../images/eyecatcher_home.jpg) no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+}
+#jumbotron_dru_yoga {
+  background: url(../../images/eyecatcher_dru_yoga.jpg) no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+}
+#jumbotron_meditatie {
+  background: url(../../images/eyecatcher_meditatie.jpg) no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+}
+#jumbotron_agenda {
+  background: url(../../images/eyecatcher_agenda.jpg) no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+}
+#jumbotron_events {
+  background: url(../../images/eyecatcher_events.jpg) no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+}
+#jumbotron_docent {
+  background: url(../../images/eyecatcher_docent.jpg) no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+}

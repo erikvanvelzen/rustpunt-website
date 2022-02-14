@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+<head>
+ <title>Dru Yoga in Amsterdam</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <link href="styles/info_pane.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+ <div class="info_main">
+  <h2>DRU MEDITATIE IN AMSTERDAM</h2>
+  <p>Er is doorlopend meditatie en de lessen zijn georganiseerd als cursussen van 12 bijeenkomsten. Het is mogelijk tussentijds in te stappen. Een cursus van 12 aansluitende lessen kost € 160,-</p>
+  <h2>LESSEN</h2>
+  <p>Iedere woensdagavond van 20.30 uur tot 22.00 uur in <a class="underlined" href="http://www.deruimteamsterdam.nl" target="_blank">De Ruimte</a> (zaal begane grond), Weesperzijde 79a.</p>
+  <h2>BETALING</h2>
+  <p>Wil je een cursus volgen maak dan € 160,- over voor aanvang van de cursus naar banknummer 52.72.85.951. Gespreide betaling is in overleg mogelijk.</p>
+ </div>
+ <div class="info_extra">
+  <h2>AANMELDEN</h2>
+  <p>Ik kom vrijblijvend ter kennismaking een meditatieles in Amsterdam bijwonen. Een proefles kost 10 euro. Ik neem een handdoek mee, een flesje water en kleding waarin ik me gemakkelijk kan zitten, ontspannen en bewegen.</p>
+  <form name="lesaanvraag_amsterdam" id="lesaanvraag_amsterdam" action="process_dru_meditatie_amsterdam.php" method="POST">
+    <div class="formfield_label_div">
+     <label for="lesaanvraag_amsterdam_naam">Naam</label>
+    </div>
+    <div class="formfield_input_div">
+     <input type="text" name="lesaanvraag_amsterdam_naam" id="lesaanvraag_amsterdam_naam" />
+    </div>
+    <div class="formfield_label_div">
+     <label for="lesaanvraag_amsterdam_telefoon">Telefoon</label>
+    </div>
+    <div class="formfield_input_div">
+     <input type="text" name="lesaanvraag_amsterdam_telefoon" id="lesaanvraag_amsterdam_telefoon" />
+    </div>
+    <div class="formfield_label_div">
+     <label for="lesaanvraag_amsterdam_emailadres">eMailadres</label>
+    </div>
+    <div class="formfield_input_div">
+     <input type="text" name="lesaanvraag_amsterdam_emailadres" id="lesaanvraag_amsterdam_emailadres" />
+    </div>
+    <div id="submit_container">
+     <ul id="submit">
+      <li id="submit_button"><a id="link_submit_button" href="submit" onclick="document.getElementById( 'lesaanvraag_amsterdam' ).submit();return false;">verzend</a></li>
+     </ul>
+    </div>
+  </form>
+ </div>
+</body>
+</html>

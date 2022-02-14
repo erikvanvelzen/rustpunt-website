@@ -1,0 +1,16 @@
+body {
+  padding-top: 4em;
+}
+.navbar {
+  font-size: 1.23rem;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #faa200;
+}
+.row {
+  --bs-gutter-x: 6.5rem;
+}
+.scroll-to-featurette {
+  position:relative;
+  top:-5.5em;
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+<head>
+ <title>Meditatie</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <link href="styles/info_pane.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+ <div class="info_main">
+  <p>Meditatie helpt om te ontspannen en tegelijk alert te zijn. Miljoenen mensen die mediteren ervaren iedere dag dat ze zich gelukkiger voelen en zich beter kunnen concentreren. Meditatie wordt bij voorkeur zittend beoefend, op een stoel, een bankje of een kussen. Tijdens de beoefening wordt geleerd om de geest op &eacute;&eacute;n object te richten. Daarbij komen drie kwaliteiten samen:</p>
+  <h2>PLEZIER</h2>
+  <p>In meditatie hoef je niets te bereiken. Je geeft je lichaam en je geest tijd om een diepe stilte te ervaren die er altijd al was en altijd zal zijn. De stilte is zo weldadig dat er alle reden is je meditatie vol plezier te beoefenen.</p>
+  <h2>ONTSPANNING</h2>
+  <p>Op een systematische wijze wordt spanning in het hele lichaam losgelaten. Dit helpt het lichaam om minder te bewegen en mentale rust te bevorderen.</p>
+  <h2>CONCENTRATIE</h2>
+  <p>Je leert je gedachten te accepteren en tegelijkertijd je geest op &eacute;&eacute;n object of activiteit te richten. Dat is makkelijker dan het misschien lijkt. Gedachten blijven bestaan maar bevinden zich meer op de achtergrond. In de zuivere aandacht maakt concentratie vanzelf plaats voor contemplatie en vervolgens meditatie.</p>
+ </div>
+ <div class="info_extra">
+  <h2>AANMELDEN</h2>
+  <p>Ik ben ge&iuml;nteresseerd om &eacute;&eacute;n keer in de week een meditatieles bij te wonen in Utrecht of Amsterdam. Laat me weten wanneer de volgende cursus begint.</p>
+  <form name="meditatie_aanvraag" id="meditatie_aanvraag" action="process_meditatie_aanvraag.php" method="POST">
+    <div class="formfield_label_div">
+     <label for="meditatie_aanvraag_naam">Naam</label>
+    </div>
+    <div class="formfield_input_div">
+     <input type="text" name="meditatie_aanvraag_naam" id="meditatie_aanvraag_naam" />
+    </div>
+    <div class="formfield_label_div">
+     <label for="meditatie_aanvraag_telefoon">Telefoon</label>
+    </div>
+    <div class="formfield_input_div">
+     <input type="text" name="meditatie_aanvraag_telefoon" id="meditatie_aanvraag_telefoon" />
+    </div>
+    <div class="formfield_label_div">
+     <label for="meditatie_aanvraag_emailadres">eMailadres</label>
+    </div>
+    <div class="formfield_input_div">
+     <input type="text" name="meditatie_aanvraag_emailadres" id="meditatie_aanvraag_emailadres" />
+    </div>
+    <div id="submit_container">
+     <ul id="submit">
+      <li id="submit_button"><a id="link_submit_button" href="submit" onclick="document.getElementById( 'meditatie_aanvraag' ).submit();return false;">verzend</a></li>
+     </ul>
+    </div>
+  </form>
+ </div>
+
+</body>
+</html>

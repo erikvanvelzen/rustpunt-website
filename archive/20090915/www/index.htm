@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+<head>
+ <title>Rustpunt</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <link href="styles/main.css" rel="stylesheet" type="text/css" media="screen" />
+ <script src="javascripts/prototype.js" type="text/javascript"></script>
+ <script src="javascripts/scriptaculous.js" type="text/javascript"></script>
+ <script type="text/javascript">
+	//<![CDATA[
+
+	function collectionToArray(col) {
+		arr = new Array();
+		for (i = 0; i < col.length; i++)
+			arr[arr.length] = col[i];
+		return arr;
+	}
+
+
+	function changeEyecatcher(idSuffix) {
+		eyecatcherCol = document.getElementById( 'eyecatchers' );
+		var eyecatchers = collectionToArray( eyecatcherCol.getElementsByTagName( 'img' ) );
+		revealElement = function( obj, index ) {
+			if (obj.id.match( idSuffix ) && obj.className != 'visible_eyecatcher') { obj.className = 'visible_eyecatcher' };
+		}
+		hideElement = function( obj, index ) {
+			if (!obj.id.match( idSuffix ) && obj.className == 'visible_eyecatcher') { obj.className = 'hidden_eyecatcher' };
+		}
+		eyecatchers.each( revealElement );
+		eyecatchers.each( hideElement );
+	}
+
+	function slideInfoPanel(fileName) {
+		if( document.getElementById( 'info_panel' ).style.display == 'none' ) {
+			panelLink = document.getElementById( 'link_' + fileName );
+			panelLink.className = 'selected';
+			openInfoPanel();
+		} else {
+			panelLink = document.getElementById( 'link_' + fileName );
+			if( panelLink.className == 'selected' ) {
+				panelLink.className = '';
+				closeInfoPanel();
+			} else {
+				panelLink.className = 'selected';
+			}
+		}
+		setInfoPanel(fileName);
+	}
+
+	function openInfoPanel() {
+		return new Effect.Parallel(
+			[ new Effect.BlindUp( "eyecatchers",
+				{ sync:true, scaleTo:35, restoreAfterFinish:false, afterFinishInternal:null } ),
+			new Effect.Appear( 'info_panel',
+				{ sync:true } ),
+			new Effect.Scale( 'info_panel', 100,
+				{ sync:true, scaleFrom:0, scaleX:false } ) ],
+			{ duration: 2.0 }
+		)
+	}
+
+	function closeInfoPanel() {
+		infoPanelHeight = document.getElementById( 'info_panel' ).style.height;
+		resetInfoPanelHeight = function(obj) {
+			document.getElementById( 'info_panel' ).style.height = obj.effects[2].options.originalHeight;
+		}
+		new Effect.Parallel(
+			[ new Effect.BlindDown( "eyecatchers",
+				{ sync:true, scaleFrom:100, scaleTo:285.7, restoreAfterFinish:false } ),
+			new Effect.Fade( 'info_panel',
+				{ sync:true } ),
+			new Effect.Scale( 'info_panel', 0,
+				{ sync:true, scaleFrom:100, scaleX:false, originalHeight:infoPanelHeight } ) ],
+			{ duration: 2.0 , afterFinish:this.resetInfoPanelHeight }
+		)
+	}
+
+
+	function setInfoPanel(fileName) {
+		infoPanel = document.getElementById( 'info_panel' );
+		if( infoPanel.src.indexOf( fileName + '.htm' ) < 0 ) {
+			selectedPanelLinkId = 'link_' + infoPanel.src.match('([^/]+).htm')[1];
+			selectedPanelLink = document.getElementById( selectedPanelLinkId );
+			if( selectedPanelLink ) { selectedPanelLink.className = '' };
+			infoPanel.src = fileName + '.htm';
+		}
+	}
+
+	//]]>
+ </script>
+</head>
+<body>
+
+ <div class="main">
+  <div class="header"><a href="index.htm"><img src="images/header.png" id="header_image"></a></div>
+  <div id="eyecatchers"><img class="visible_eyecatcher" id="eyecatcher_main" src="images/eyecatcher_main.jpg" /><img class="hidden_eyecatcher" id="eyecatcher_dru_yoga" src="images/eyecatcher_dru_yoga.jpg" /><img class="hidden_eyecatcher" id="eyecatcher_meditatie" src="images/eyecatcher_meditatie.jpg" /><img class="hidden_eyecatcher" id="eyecatcher_stressmanagement" src="images/eyecatcher_stressmanagement.jpg" /><img class="hidden_eyecatcher" id="eyecatcher_welzijn" src="eyecatcher_welzijn.jpg" /><img class="hidden_eyecatcher" id="eyecatcher_docent" src="images/eyecatcher_docent.jpg" /></div>
+ <div id="tabs_container">
+  <div id="tabs">
+   <ul id="buttons">
+    <li id="button_dru_yoga"><a id="link_dru_yoga" href="dru_yoga.htm" onclick="slideInfoPanel('dru_yoga');return false;" onmouseover="changeEyecatcher('dru_yoga');">Dru yoga</a></li>
+    <li id="button_meditatie"><a id="link_meditatie" href="meditatie.htm" onclick="javascript:slideInfoPanel('meditatie');return false;" onmouseover="changeEyecatcher('meditatie');">Meditatie</a></li>
+    <li id="button_stressmanagement"><a id="link_stressmanagement" href="stressmanagement.htm" onclick="javascript:slideInfoPanel('stressmanagement');return false;" onmouseover="changeEyecatcher('stressmanagement');">Stressmanagement</a></li>
+    <li id="button_welzijn"><a id="link_welzijn" href="welzijn.htm" onclick="javascript:slideInfoPanel('welzijn');return false;" onmouseover="changeEyecatcher('welzijn');">Welzijn</a></li>
+    <li id="button_contact"><a id="link_contact" href="contact.htm" onclick="javascript:slideInfoPanel('contact');return false;" onmouseover="changeEyecatcher('main');">Contact</a></li>
+    <li id="button_agenda"><a id="link_agenda" href="agenda.htm" onclick="javascript:slideInfoPanel('agenda');return false;" onmouseover="changeEyecatcher('main');">Agenda</a></li>
+    <li id="button_docent"><a id="link_docent" href="docent.htm" onclick="javascript:slideInfoPanel('docent');return false;" onmouseover="changeEyecatcher('docent');">Docent</a></li>
+    <li id="button_links"><a id="link_links" href="links.htm" onclick="javascript:slideInfoPanel('links');return false;" onmouseover="changeEyecatcher('main');">Links</a></li>
+   </ul>
+  </div>
+  <div>
+   <iframe id="info_panel" class="info_panel" style="display: none;" scrolling="no" src="blank.htm" type="text/html"></iframe>
+  </div>
+ </div>
+
+ <script type="text/javascript">
+ 	// Load eyecatcher images that are not meeded immediately last.
+	//<![CDATA[
+	document.getElementById( 'eyecatcher_dru_yoga' ).src = 'images/eyecatcher_dru_yoga.jpg';
+	document.getElementById( 'eyecatcher_meditatie' ).src = 'images/eyecatcher_meditatie.jpg';
+	document.getElementById( 'eyecatcher_stressmanagement' ).src = 'images/eyecatcher_stressmanagement.jpg';
+	document.getElementById( 'eyecatcher_welzijn' ).src = 'images/eyecatcher_welzijn.jpg';
+	document.getElementById( 'eyecatcher_docent' ).src = 'images/eyecatcher_docent.jpg';
+	//]]>
+ </script>
+
+</body>
+</html>

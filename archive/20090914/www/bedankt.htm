@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+<head>
+ <title>Formulier verzonden</title>
+  <script type="text/javascript">
+  //<![CDATA[
+  function getRedirectLocation() {
+   var query = window.location.search.substring(1);
+   var redirect = query.split("&")[0].split("=")[1] + '.htm';
+   return redirect;
+  }
+  document.write( '<meta http-equiv="refresh" content="15;URL=' + getRedirectLocation() + '"/>' );
+  //]]>
+  </script>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <link href="styles/info_pane.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+ <div class="info_main">
+  <h2>UW AANVRAAG IS VERZONDEN</h2>
+  <p>Hartelijk dank voor uw interesse. Het aanvraagformulier is inmiddels verzonden. Wij nemen uw aanvraag in behandeling en nemen zo spoedig mogelijk contact met u op.</p>
+  <p>Klik 'ok' of wacht tot u automatisch wordt teruggestuurd naar de pagina waar u vandaan kwam.</p>
+    <div id="submit_container">
+     <ul id="submit">
+      <li id="ok_button"><a id="link_submit_button" href="terug" onclick="document.location=getRedirectLocation();return false;">verzend</a></li>
+     </ul>
+    </div>
+ </div>
+ <div class="info_extra">
+ </div>
+</body>
+</html>
