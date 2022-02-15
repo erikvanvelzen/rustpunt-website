@@ -52,3 +52,9 @@ img.img-fluid.featurette.jumbo {
 .lead_highlight {
   font-variant: small-caps;
 }
+footer {
+  text-align: center;
+}
+#privacy_statement {
+  font-size: 70%;
+}
