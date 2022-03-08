@@ -21,9 +21,20 @@
   Array.prototype.slice.call( forms )
     .forEach( function ( form ) {
       form.addEventListener( 'submit', function( evt ) {
-        if( !form.checkValidity() ) {
-          evt.preventDefault()
-          evt.stopPropagation()
+        evt.preventDefault()
+        evt.stopPropagation()
+        if( form.checkValidity() ) {
+          var formData = new FormData( form );
+          var xhr = new XMLHttpRequest();
+          xhr.open( 'POST', 'form_handler_evc.php', true );
+          xhr.onload = function( xhr_event ) {
+            if ( xhr.status == 200 ) {
+              console.log( 'succes' );
+            } else {
+              console.log( 'fail' );
+            }
+          };
+          xhr.send(formData);
         }
         form.classList.add( 'was-validated' )
       }, false)
