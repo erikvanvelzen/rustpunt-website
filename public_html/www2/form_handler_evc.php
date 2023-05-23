@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $message = "Via de site ErikvanVelzen.com is een bericht binnengekomen:\n\n$message";
   $mail_address = "erikvanvelzen@protonmail.com";
   // $mail_address = "joris@jorisvanzundert.net";
-  mail($mail_address,$subject,$message,"From: phpFormGenerator");
+  mail($mail_address,$subject,$message,"From: noreply@erikvanvelzen.com");
   header($_SERVER['SERVER_PROTOCOL'] . ' 200 OK', true, 200);
 }
 
